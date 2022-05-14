@@ -1,0 +1,15 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $dark-background;
+
+    &__container {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__follow {
+        margin-left: 70px;
+    }
+}
+

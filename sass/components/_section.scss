@@ -1,0 +1,12 @@
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__no-padding {
+        padding-top: 0;
+    }
+
+    &__team {
+        background-color: $secondary-bgd-color;
+    }
+}
