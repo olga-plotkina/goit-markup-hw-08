@@ -1,9 +1,17 @@
 .page-header {
+    position: relative;
+
     border-bottom: 1px solid $border-header-color;
 
-    &__inner,
     &__nav {
         display: flex;
         align-items: center;
         }
 }
+
+.page-header__address {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
