@@ -3,27 +3,95 @@
   align-items: center;
 }
 
-.menu__navigation {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 93px;
+.menu__container {
+  width: 100%;
+  height: 100%;
+  padding: 48px 40px;
 
-  @media screen and (max-width: $mobile) {
+
+  background-color: $primary-white-color;
+
+  @include for-phone-only {
+    display: none;
+
+    position: fixed;
+    width: 100%;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+  }
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.menu__button {
+  position: fixed;
+  z-index: 60;
+  top: 10px;
+  right: 15px;
+  transform: translate(-50%, 50%);
+
+
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @include for-tablet-up {
     display: none;
   }
 }
 
+.menu__icon-cross,
+.menu__button.is-open menu__icon-menu {
+  display: none;
+}
+
+.menu__button.is-open menu__icon-cross {
+  display: block;
+}
+
+.menu__navigation {
+  display: none;
+  
+  @include for-tablet-up {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 93px;
+  }
+}
+
+.menu__item {
+  margin-top: 32px;
+  margin-bottom: 32px;
+
+  @include for-phone-only {
+    margin-bottom: 0;
+
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
 
 .menu__link {
   position: relative;
   display: block;
 
-  padding: 32px 25px;
+  padding: 0;
 
-  color: $title-text-color;
-  font-weight: 500;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.175;
   letter-spacing: 0.02em;
+  color: $title-text-color;
   white-space: nowrap;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -32,86 +100,94 @@
   &:focus {
     color: $accent-color;
     }
+
+  @include for-tablet-up {
+    font-weight: 500;
+    line-height: 1.14;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
-
-.menu__link--address {
-  display: flex;
-  align-items: center;
-  padding-left: 0;
-  padding-right: 0;
-
-  color: $primary-text-color;
-}
-
 .menu__link--current {
   color: $accent-color;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 50%;
-    transform: translate(-50%);
-  
-    width: 48px;
-    height: 4px;
-  
-    background-image: url(../images/hover.svg);
+  @include for-tablet-up {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      transform: translate(-50%);
+
+      width: 48px;
+      height: 4px;
+
+      background-image: url(../images/hover.svg);
     }
+  }
+}
+.menu__address {
+  margin-top: 302px;
+
+  @include for-tablet-up {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
 }
 
-.menu__item:not(:last-child) {
-  margin-right: 50px;
-}
+.menu__address-link {
+  padding: 0;
+  font-size: 24px;
+  line-height: 1.1667;
+  color: $primary-text-color;
 
+  @include for-tablet-up {
+    display: flex;
+    align-items: center;
+  }
+ 
+  &--number {
+    font-size: 34px;
+    line-height: 1.1765;
+    color: $accent-color;
+  }
+}
 .menu__icon-address {
+  display: none;
+
   margin-right: 10px;
   width: 16px;
   height: 16px;
   fill: currentColor;
+
+  @include for-tablet-up {
+    display: inline-block;
+  }
 }
 
-.menu__button {
-  display: inline-flex;
-  margin: 0;
+.menu__mini-socials {
+  display: flex;
   padding: 0;
-  border: none;
-  background-color: transparent;
-}
+  margin-top: 64px;
+  margin-left: -10px;
 
-.menu__icon-cross,
-.menu__button.is-open menu__icon-menu {
+  @include for-tablet-up {
     display: none;
   }
-
-.menu__button.is-open menu__icon-cross {
-    display: block;
-  }
-
-.menu__container {
-  display: none;
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-
-  width: 100%;
-  padding: 48px 40px;
-
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.175;
-  letter-spacing: 0.02em;
-  color: $title-text-color;
-
-  background-color: $primary-white-color;
-
-  &.is-open {
-    display: block;
-  }
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
 }
+.menu__mini-link {
+  padding: 0 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222;
+  color: $accent-color;
+}
+
+.menu__mini-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+
+
+
