@@ -1,3 +1,11 @@
+.products-wrap {
+    display: none;
+    
+    @include for-desktop-up {
+        display: block;
+    }
+}
+
 .products {
     display: flex;
 

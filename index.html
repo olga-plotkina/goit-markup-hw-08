@@ -15,14 +15,13 @@
     <!--Шапка сайта-->
     <header class="page-header">
         <div class="container">
-            <div class="menu">
-                <nav class="page-header__nav">
+                <nav class="menu">
                     <a class="logo" href="./index.html">
                         <span class="logo__prefix">Web</span>Studio
                     </a>
                     <button 
                         type="button" 
-                        class="menu__button is-open" 
+                        class="menu__button" 
                         aria-expanded="false" 
                         aria-controls="menu-container"
                         data-menu-button
@@ -36,7 +35,7 @@
                             <use class="menu__icon-menu" href="./images/icons.svg#icon-menu"></use>
                         </svg>
                     </button>
-                    <div class="menu__container" id="menu-container">
+                    <div class="menu__container" id="menu-container" data-menu>
                         <ul class="menu__navigation list">
                             <li class="menu__item"><a href="" class="menu__link menu__link--current">Студия</a></li>
                             <li class="menu__item"><a href="portfolio.html" class="menu__link">Портфолио</a>
@@ -44,7 +43,7 @@
                             <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
                         </ul>
                         <ul class="menu__address list">
-                            <li class="menu__item">
+                            <li class="menu__address-item">
                                 <a href="tel:+380961111111" class="menu__address-link menu__address-link--number">
                                     <svg class="menu__icon-address">
                                         <use href="./images/icons.svg#icon-smartphone"></use>
@@ -52,7 +51,7 @@
                                     +38 096 111 11 11
                                 </a>
                             </li>
-                            <li class="menu__item">
+                            <li class="menu__address-item">
                                 <a href="mailto:info@devstudio.com" class="menu__address-link">
                                     <svg class="menu__icon-address">
                                         <use href="./images/icons.svg#icon-envelope"></use>
@@ -68,7 +67,7 @@
                             </ul>
                         </ul>
                     </div>
-            </div>
+                </nav>
         </div>
     </header>
     <!--Уникальный контент страницы-->
@@ -127,27 +126,29 @@
             </section>
 
             <!--Чем мы занимаемся-->
-            <section class="section section__no-padding">
-                <div class="container">
-                    <h2 class="title">Чем мы занимаемся</h2>
-                    <ul class="products list">
-                        <li class="products__item">
-                            <img src="./images/whatwedo1.jpg" alt="Десктопные приложения" width="370">
-                            <h3 class="title--subtitle products__subtitle">Десктопные приложения</h3>
-                        </li>
-
-                        <li class="products__item">
-                            <img src="./images/whatwedo2.jpg" alt="Мобильные приложения" width="370">
-                            <h3 class="title--subtitle products__subtitle">Мобильные приложения</h3>
-                        </li>
-
-                        <li class="products__item">
-                            <img src="./images/whatwedo3.jpg" alt="Дизайнерские решения" width="370">
-                            <h3 class="title--subtitle products__subtitle">Дизайнерские решения</h3>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+            <div class="products-wrap">
+                <section class="section section__no-padding">
+                    <div class="container">
+                        <h2 class="title">Чем мы занимаемся</h2>
+                        <ul class="products list">
+                            <li class="products__item">
+                                <img src="./images/whatwedo1.jpg" alt="Десктопные приложения" width="370">
+                                <h3 class="title--subtitle products__subtitle">Десктопные приложения</h3>
+                            </li>
+                
+                            <li class="products__item">
+                                <img src="./images/whatwedo2.jpg" alt="Мобильные приложения" width="370">
+                                <h3 class="title--subtitle products__subtitle">Мобильные приложения</h3>
+                            </li>
+                
+                            <li class="products__item">
+                                <img src="./images/whatwedo3.jpg" alt="Дизайнерские решения" width="370">
+                                <h3 class="title--subtitle products__subtitle">Дизайнерские решения</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
             <!--Команда-->
             <section class="section section__team">
                <div class="container">
@@ -373,12 +374,12 @@
     <!--Футер-->
     <footer class="footer">
         <div class="container footer__container">
-                    <div>
+                    <div class="footer-address">
                         <a class="logo logo__footer" href="./index.html">
                             <span class="logo__prefix">Web</span>Studio
                         </a>
-                        <address>
-                            <ul class="footer-address list">
+                        <address class="footer-address__address">
+                            <ul class="list">
                                 <li class="footer-address__item"><a class="link footer-address__link" href="">г. Киев, пр-т Леси Украинки, 26 </a></li>
                                 <li class="footer-address__item"><a class="link footer-address__link footer-address__link--grey" href="mailto:info@example.com">info@example.com</a></li>
                                 <li class="footer-address__item"><a class="link footer-address__link footer-address__link--grey" href="tel:+380991111111">+38 099 111 11 11</a></li>
@@ -419,18 +420,19 @@
                         </ul>
                     </div>
                     <div class="subscribe">
-                        <span class="cta"> <b> Подпишитесь на рассылку </b></span>
                         <div class="subscribe__email">
+                            <span class="cta"> <b> Подпишитесь на рассылку </b></span>
                             <label class="visually-hidden" for="subscribe-email">Имя</label>
                             <input class="subscribe__input" name="subscribe_email" id="subscribe-email" type="email" placeholder="E-mail">
-                            <button type="submit" class="button button__subscribe">
-                                Подписаться
-                                <svg class="subscribe__icon">
-                                    <use href="./images/icons.svg#icon-send"></use>
-                                </svg>
-                            </button>
-                                
                         </div>
+                        <button type="submit" class="button button__subscribe">
+                            Подписаться
+                            <svg class="subscribe__icon">
+                                <use href="./images/icons.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                                
+                        
                     </div>
         </div>
     </footer>
@@ -492,5 +494,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

@@ -4,12 +4,18 @@
     background-color: $dark-background;
 
     &__container {
-        display: flex;
-        align-items: baseline;
+
+        @include for-tablet-up {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
 
     &__follow {
-        margin-left: 70px;
+        flex-basis: 50%;
+        // margin-left: 70px;
     }
 }
 

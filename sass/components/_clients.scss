@@ -1,16 +1,28 @@
 .clients {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: -15px;
 }
 
 .clients__item {
-    width: 170px;
+    // width: 170px;
     height: 92px;
+    flex-basis: calc((100% - 60px)/2);
+    margin: 15px;
 
-    &:not(:last-child) {
-        margin-right: 30px;
+    @include for-tablet-up {
+        flex-basis: calc((100% - 90px)/3);
     }
+
+    @include for-desktop-up {
+        flex-basis: calc((100% - 180px)/6);
+    }
+
+    // &:not(:last-child) {
+    //     margin-right: 30px;
+    // }
 }
 
 .clients__link {

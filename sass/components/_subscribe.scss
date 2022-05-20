@@ -1,11 +1,11 @@
 .subscribe {
-    margin-left: auto;
+    @include for-tablet-up {
+        flex-grow: 1;
+    }
+    // margin-left: auto;
 }
 
 .subscribe__email {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 20px;
 }
 

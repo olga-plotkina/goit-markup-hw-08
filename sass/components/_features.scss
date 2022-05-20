@@ -1,13 +1,34 @@
 .features {
-    display: flex;
+    margin: -15px;
+
+    @include for-tablet-up {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     &__item {
-        width: 270px;
+        // max-width: 450px;
+        // margin-left: auto;
+        // margin-left: auto;
+        margin: 15px;
+        flex-basis: calc(100% - 30px);
+
+        @include for-tablet-up {
+            flex-basis: calc((100% - 60px)/2);
+            // width: 354px;
+            // margin-left: 0;
+        }
+        @include for-desktop-up {
+            flex-basis: calc((100% - 120px)/4);
+            // width: 270px;
+        }
     }
     
     &__item:not(:last-child) {
-        margin-right: 45px;
+        @include for-tablet-up {
+          margin-right: 30px;
     }
+}
     
     &__thumb {
         display: flex;

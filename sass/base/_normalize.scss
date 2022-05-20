@@ -59,6 +59,9 @@ body {
     /* 2 */
 }
 
+body.modal-open {
+    overflow: hidden;
+}
 /*
 Grouping content
 ================

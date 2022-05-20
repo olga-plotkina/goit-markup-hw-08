@@ -1,4 +1,7 @@
 .logo {
+
+    padding-top: 16px;
+    padding-bottom: 16px;
     color: $title-text-color;
     font-family: Raleway, sans-serif;
     text-decoration: none;
@@ -12,6 +15,14 @@
     
     &__footer {
         color: $primary-white-color;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include for-tablet-up {
+        padding: 0;
     }
 
 }

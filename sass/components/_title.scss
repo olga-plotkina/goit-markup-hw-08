@@ -1,21 +1,36 @@
 .title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     color: $title-text-color;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.1786;
     text-align: center;
+
+    @include for-tablet-up {
+        font-size: 36px;
+        line-height: 1.1667;
+    }
+    @include for-desktop-up {
+        margin-bottom: 50px;
+    }
 
     &--subtitle {
         margin-bottom: 10px;
         
         color: $title-text-color;
+        text-align: center;
         font-weight: 700;
         font-size: 14px;
         line-height: 1.1429;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+
+        @include for-tablet-up {
+            text-align: left;
+        }
     }
+
 }
+
 
