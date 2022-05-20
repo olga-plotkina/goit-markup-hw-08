@@ -15,6 +15,7 @@
 
         @include for-tablet-up {
             flex-basis: calc((100% - 60px)/2);
+
             // width: 354px;
             // margin-left: 0;
         }
@@ -23,12 +24,6 @@
             // width: 270px;
         }
     }
-    
-    &__item:not(:last-child) {
-        @include for-tablet-up {
-          margin-right: 30px;
-    }
-}
     
     &__thumb {
         display: flex;

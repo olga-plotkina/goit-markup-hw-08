@@ -1,13 +1,17 @@
 
 .footer-address {
 
-    @include for-tablet-up {
+    @include for-tablet-only {
         flex-basis: 50%;
     }
 }
 .footer-address__address {
     margin-top: 20px;
     text-align: center;
+
+    @include for-desktop-up {
+        text-align: left
+    }
 }
 .footer-address__item:not(:last-child) {
     margin-bottom: 8px;

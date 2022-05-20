@@ -23,9 +23,15 @@
     &__subscribe {
         position: relative;
 
-        margin-top: 0;
+        margin-top: 20px;
         text-align: left;
         padding-left: 29px;
+
+        @include for-desktop-up {
+            margin-top: 0;
+            margin-left: 12px;
+            align-self: flex-end;
+        }
     }
 }
 

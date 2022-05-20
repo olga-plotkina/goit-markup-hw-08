@@ -1,7 +1,5 @@
 .logo {
 
-    padding-top: 16px;
-    padding-bottom: 16px;
     color: $title-text-color;
     font-family: Raleway, sans-serif;
     text-decoration: none;
@@ -19,6 +17,10 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+
+        @include for-desktop-up {
+            text-align: left;
+        }
     }
 
     @include for-tablet-up {

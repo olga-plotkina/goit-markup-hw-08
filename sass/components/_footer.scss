@@ -11,10 +11,33 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
+
+        @include for-desktop-up {
+            justify-content: flex-start;
+    
+        }
     }
 
     &__follow {
-        flex-basis: 50%;
+
+            margin-top: 60px;
+            text-align: center;
+
+
+        @include for-tablet-only {
+            flex-basis: 50%;
+        }
+
+        @include for-tablet-up {
+            margin-top: 0 ;
+        }
+
+        @include for-desktop-up {
+            margin-left: 70px;
+            text-align: left;
+        }
+        
+        
         // margin-left: 70px;
     }
 }
