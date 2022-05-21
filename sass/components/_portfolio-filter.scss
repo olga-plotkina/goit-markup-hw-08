@@ -1,12 +1,41 @@
 .filter {
-    display: flex;
-    margin-bottom: 50px;
-    justify-content: center;
+    margin-bottom: 40px;
+
+    @include for-tablet-up {
+        margin-bottom: 30px;
+    }
+
+    @include for-desktop-up {
+        margin-bottom: 50px;
+    }
 }
+
+.filter__list {
+    display: flex;
+    justify-content: center;
+
+    @include for-phone-only {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+}
+
+// .filter-item {
+//     display: inline-block;
+// }
 
 .filter__item:not(:last-child) {
     margin-right: 8px;
 }
+
+.filter__item:not(:nth-last-child(-n +2)) {
+    @include for-phone-only {
+        margin-bottom: 15px;
+    }
+}
+
+
 
 .filter__button {
     display: inline-block;

@@ -2,8 +2,8 @@
     position: relative;
     display: flex;
     align-items: center;
+    text-align: center;
     margin-top: 20px;
-    margin-left: 12px;
 }
 
 .checkbox__input {
@@ -48,6 +48,10 @@
 .checkbox__label {
     line-height: 1.7143;
     padding-left: 25px;
+
+    @include for-phone-up {
+    white-space: nowrap;
+    }
 }
 
 .checkbox__contract {

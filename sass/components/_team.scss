@@ -8,6 +8,26 @@
 
     }
     
+    &__thumb {
+        // width: 450px;
+        height: 460px;
+
+        @include for-tablet-up {
+            // width: 354px;
+            height: 374;
+        }
+
+        @include for-desktop-up {
+            width: 270px;
+            height: 260px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     &__item {
         // width: 270px;
