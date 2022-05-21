@@ -17,19 +17,13 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    
     @include for-desktop-up {
         padding-top: 200px;
         padding-bottom: 200px;
         height: 600px;
     }
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .hero {
-            background-image: url('../../images/bg-hero-2x.jpg');
-        }
-    }
+    
 
     &__title {
         margin: 0 auto;
@@ -52,6 +46,14 @@
             font-size: 44px;
             line-height: 1.3636;
         }
+    }
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: url('../../images/bg-hero-2x.jpg');
     }
 }
 
