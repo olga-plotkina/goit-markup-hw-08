@@ -2,12 +2,15 @@
     position: relative;
     display: flex;
     align-items: center;
-    text-align: center;
     margin-top: 20px;
+    @include for-desktop-up {
+        padding-left: 12px;
+    }
 }
 
 .checkbox__input {
     display: block;
+    
 }
 
 

@@ -18,7 +18,12 @@ text-align: center;
     // }
 
     &__item {
-        width: calc(100% - #{$card-set-gap});
+        max-width: 450px;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+
+        }
         // max-width: 450px;
 
         @include for-tablet-up {
@@ -31,6 +36,7 @@ text-align: center;
         @include for-desktop-up {
             flex-basis: calc((100% - 3*(#{$card-set-gap}))/3);
         }
+
     }
 
     // &__item:not(:last-child) {

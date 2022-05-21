@@ -1132,7 +1132,10 @@ textarea {
   }
 }
 .card-set__item {
-  width: calc(100% - 30px);
+  max-width: 450px;
+}
+.card-set__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 @media (min-width: 768px) {
   .card-set__item {
@@ -1163,10 +1166,15 @@ textarea {
 .case__thumb {
   position: relative;
   overflow: hidden;
+  max-width: 450px;
+  height: 294px;
 }
 
 .case__image {
   height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .case__guide {
@@ -1604,8 +1612,12 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
   margin-top: 20px;
+}
+@media (min-width: 1200px) {
+  .checkbox {
+    padding-left: 12px;
+  }
 }
 
 .checkbox__input {
