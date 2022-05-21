@@ -698,6 +698,11 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../../images/bg-hero-2x.jpg");
+  }
+}
 @media (min-width: 1200px) {
   .hero {
     padding-top: 200px;
@@ -728,11 +733,6 @@ textarea {
   }
 }
 
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero {
-    background-image: url("../../images/bg-hero-2x.jpg");
-  }
-}
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
