@@ -563,6 +563,7 @@ textarea {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    margin-left: 59px;
   }
 }
 @media (min-width: 1200px) {
@@ -574,6 +575,7 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-left: 280px;
   }
 }
 
@@ -655,6 +657,11 @@ textarea {
 .menu__mini-socials {
   margin-top: 64px;
   margin-left: -10px;
+}
+@media (min-width: 768px) {
+  .menu__mini-socials {
+    display: none;
+  }
 }
 
 .menu__mini-list {
