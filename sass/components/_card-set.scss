@@ -18,14 +18,15 @@ text-align: center;
     //     margin-top: 50px - $card-set-gap/2;
     // }
 
-    card-set__item {
+    .card-set__item {
         // max-width: 450px;
         @include for-phone-only {
-            &:not(:last-child) {
-                    margin-bottom: 30px;
-            
-                }
+        &:not(:last-child) {
+                margin-bottom: 30px;
+        
+            }
         }
+    
         
         // max-width: 450px;
 
