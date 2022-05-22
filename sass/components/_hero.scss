@@ -13,7 +13,7 @@
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
          url("../images/bg-hero.jpg");
-    background-size: 1600px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -24,16 +24,11 @@
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)), url('../images/bg-hero-2x.jpg');
         }
-    
-    @include for-tablet-up {
-        background-size: 768px;
-    }
-    
+  
     @include for-desktop-up {
         padding-top: 200px;
         padding-bottom: 200px;
         height: 600px;
-        background-size: 1200px;
     }
     
 
