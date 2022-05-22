@@ -292,7 +292,7 @@ img {
   color: #757575;
   font-family: Roboto, sans-serif;
   font-size: 14px;
-  letter-spacing: 0, 3em;
+  letter-spacing: 0.03em;
 }
 
 textarea {
@@ -722,16 +722,10 @@ textarea {
   max-width: 696px;
   color: #fff;
   font-weight: 900;
-  font-size: 24px;
-  line-height: 1.75;
+  font-size: 26px;
+  line-height: 1.6154;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-@media (min-width: 768px) {
-  .hero__title {
-    font-size: 26px;
-    line-height: 1.6154;
-  }
 }
 @media (min-width: 1200px) {
   .hero__title {

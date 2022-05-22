@@ -44,15 +44,10 @@
         color: $primary-white-color;
         
         font-weight: 900;
-        font-size: 24px;
-        line-height: 1.75;
+        font-size: 26px;
+        line-height: 1.6154;
         letter-spacing: 0.06em;
         text-transform: uppercase;
-
-        @include for-tablet-up {
-            font-size: 26px;
-            line-height: 1.6154;
-        }
 
         @include for-desktop-up {
             font-size: 44px;
