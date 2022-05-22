@@ -1145,21 +1145,22 @@ textarea {
     gap: 30px;
   }
 }
-.card-set__item {
-  max-width: 450px;
-}
-.card-set__item:not(:last-child) {
-  margin-bottom: 30px;
+
+@media (max-width: 767px) {
+  card-set__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media (min-width: 768px) {
-  .card-set__item {
-    width: 354px;
+  card-set__item {
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+        flex-basis: calc((100% - 2 * 30px) / 2);
   }
 }
 @media (min-width: 1200px) {
-  .card-set__item {
-    -ms-flex-preferred-size: calc((100% - 3 * (30px)) / 3);
-        flex-basis: calc((100% - 3 * (30px)) / 3);
+  card-set__item {
+    -ms-flex-preferred-size: calc((100% - 3 * 30px) / 3);
+        flex-basis: calc((100% - 3 * 30px) / 3);
   }
 }
 

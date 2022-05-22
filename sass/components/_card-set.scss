@@ -12,29 +12,32 @@ text-align: center;
 
         // margin-top: 30px - $card-set-gap/2;
     }
+}
 
     // @include for-desktop-up {
     //     margin-top: 50px - $card-set-gap/2;
     // }
 
-    &__item {
-        max-width: 450px;
-
-        &:not(:last-child) {
-            margin-bottom: 30px;
-
+    card-set__item {
+        // max-width: 450px;
+        @include for-phone-only {
+            &:not(:last-child) {
+                    margin-bottom: 30px;
+            
+                }
         }
+        
         // max-width: 450px;
 
         @include for-tablet-up {
             // max-width: 354px;
             // margin: $card-set-gap/2;
-            // flex-basis: calc((100% - 2*(#{$card-set-gap}))/2);
-            width: 354px;
+            flex-basis: calc((100% - 2 * #{$card-set-gap}) / 2);
+            // width: 354px;
         }
 
         @include for-desktop-up {
-            flex-basis: calc((100% - 3*(#{$card-set-gap}))/3);
+            flex-basis: calc((100% - 3 * #{$card-set-gap}) / 3);
         }
 
     }
@@ -83,5 +86,4 @@ text-align: center;
     //         margin-bottom: 0;
     //     }
     // }
-}
 
